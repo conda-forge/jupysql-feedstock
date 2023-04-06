@@ -146,4 +146,7 @@ Feedstock Maintainers
 =====================
 
 * [@sterlinm](https://github.com/sterlinm/)
+* [@yafimvo](https://github.com/yafimvo)
+* [@idomic](https://github.com/idomic)
+* [@edublancas](https://github.com/edublancas)
 
