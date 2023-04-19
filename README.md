@@ -145,8 +145,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@edublancas](https://github.com/edublancas/)
+* [@idomic](https://github.com/idomic/)
 * [@sterlinm](https://github.com/sterlinm/)
-* [@yafimvo](https://github.com/yafimvo)
-* [@idomic](https://github.com/idomic)
-* [@edublancas](https://github.com/edublancas)
+* [@yafimvo](https://github.com/yafimvo/)
 
