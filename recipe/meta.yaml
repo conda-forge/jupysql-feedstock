@@ -1,5 +1,5 @@
 {% set name = "jupysql" %}
-{% set version = "0.10.7" %}
+{% set version = "0.10.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupysql-{{ version }}.tar.gz
-  sha256: 555b8255c077de68f6b4b5482aeb020624ee54ce441b8d942ee3e38096854a9c
+  sha256: 14c2a5ad361f62b2f24fe61fbeb2810c9d1b97196aca3736177ec8708b02d9a5
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
