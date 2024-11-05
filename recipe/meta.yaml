@@ -1,5 +1,5 @@
 {% set name = "jupysql" %}
-{% set version = "0.10.14" %}
+{% set version = "0.10.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupysql-{{ version }}.tar.gz
-  sha256: 984458fdb315e1b885b10dc3dfdc5b5cc3529cdde54377b2678de7b27d331491
+  sha256: 93100c0c2cf30d7ec679135fab030a7f955991c6adfb38eb8534f5e1274d3348
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -23,7 +23,7 @@ requirements:
     - jupysql-plugin >=0.4.2
     - psutil
     - python >=3.7
-    - prettytable
+    - prettytable >=3.12.0
     - ipython >=1.0
     - sqlalchemy
     - sqlparse
