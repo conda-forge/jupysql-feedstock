@@ -1,12 +1,13 @@
 {% set name = "jupysql" %}
 {% set version = "0.10.15" %}
+{% set python_min = python_min|default("3.9") %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupysql-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupysql-{{ version }}.tar.gz
   sha256: 93100c0c2cf30d7ec679135fab030a7f955991c6adfb38eb8534f5e1274d3348
 
 build:
@@ -16,22 +17,21 @@ build:
 
 requirements:
   host:
-    - python >=3.7
     - pip
+    - python {{ python_min }}.*
+    - setuptools
   run:
-    - ploomber-extension
-    - jupysql-plugin >=0.4.2
-    - psutil
-    - python >=3.7
+    - python >={{ python_min }}
     - prettytable >=3.12.0
-    - ipython >=1.0
+    - ipython
     - sqlalchemy
     - sqlparse
     - ipython_genutils >=0.1.0
-    - sqlglot >=11.3.7
     - jinja2
+    - sqlglot >=11.3.7
+    - jupysql-plugin >=0.4.2
     - ploomber-core >=0.2.7
-    - importlib-metadata
+    - psutil
 
 test:
   imports:
@@ -40,6 +40,7 @@ test:
     - pip check
   requires:
     - pip
+    - python ={{ python_min }}
 
 about:
   home: https://github.com/ploomber/jupysql
